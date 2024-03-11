@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@100;200;300;400;500;600;700;800&display=swap");
+
+// Font Family
+$gov-ff-base: "Inter", sans-serif;
+
+/* Font Weight */
+$gov-fw-100: 100;
+$gov-fw-200: 200;
+$gov-fw-300: 300;
+$gov-fw-400: 400;
+$gov-fw-500: 500;
+$gov-fw-600: 600;
+$gov-fw-700: 700;
+$gov-fw-800: 800;
+$gov-fw-900: 900;
+
+// Font Size
+$gov-fs-base: 1rem; // 16px
+$gov-fs-xx-sm: $gov-fs-base * 0.5; // 8px
+$gov-fs-x-sm: $gov-fs-base * 0.625; // 10px
+$gov-fs-xs: $gov-fs-base * 0.75; // 12px
+$gov-fs-sm: $gov-fs-base * 0.875; // 14px
+$gov-fs-lg: $gov-fs-base * 1.125; // 18px
+$gov-fs-x-lg: $gov-fs-base * 1.25; // 20px
+$gov-fs-xx-lg: $gov-fs-base * 1.375; //22px
+
+// Custom Font Size
+$gov-fs-24: $gov-fs-base * 1.5;
+
+// Line Height
+$gov-lh-base: 1.25rem;
+
+// Font Size (Heading)
+$gov-fs-h1: $gov-fs-base * 2;
+$gov-fs-h2: $gov-fs-lg * 1.5;
+$gov-fs-h3: $gov-fs-lg * 1.5;
+$gov-fs-h4: $gov-fs-base * 1.5;
+
+// Button
+$gov-btn-fs: $gov-fs-xs;
+$gov-btn-lh: 0.908rem;
+
+// Heading Font Size
+h1,
+.h1 {
+  font-size: $gov-fs-h1;
+  font-weight: $gov-fw-600;
+  letter-spacing: -0.03rem;
+}
+
+h2,
+.h2 {
+  font-size: $gov-fs-h2;
+  font-weight: $gov-fw-500;
+  letter-spacing: -0.03rem;
+}
+
+h3,
+.h3 {
+  font-size: $gov-fs-h3;
+  letter-spacing: -0.03rem;
+}
+
+h4,
+.h4 {
+  font-size: $gov-fs-h4;
+  letter-spacing: -0.03rem;
+}

@@ -1,0 +1,10 @@
+@import 'abstract/index';
+
+@import 'base/index';
+
+@import 'layouts/index';
+
+@import 'components/index';
+
+
+//  sass --watch scss/style.scss:css/style.min.css --style compressed
