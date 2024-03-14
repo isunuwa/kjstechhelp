@@ -1,0 +1,29 @@
+.footer {
+  padding: 100px 48px;
+  background-color: $secondary;
+}
+
+.footer-heading {
+  color: $primary;
+  font-weight: $fw-600;
+}
+
+.footer-body {
+  font-size: $fs-sm;
+  color: #bdbdbd;
+}
+
+.has-wave {
+  position: relative;
+  margin-top: 260px;
+
+  &::before {
+    // content: url('/assets/svgs/footer-wave.svg');
+    content: url("/assets/svgs/footer-wave.svg");
+    object-fit: cover;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: calc(100% - 4px);
+  }
+}

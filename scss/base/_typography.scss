@@ -64,3 +64,9 @@ h4,
 .h4 {
   font-size: $fs-h4;
 }
+
+@each $color, $value in $colors {
+  .text-#{$color} {
+    color: $value;
+  }
+}

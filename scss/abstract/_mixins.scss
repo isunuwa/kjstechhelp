@@ -1,89 +1,116 @@
 // Compatibility
 @mixin css3-prefix($property, $value) {
-    -webkit-#{$property}: #{$value};
-    -khtml-#{$property}: #{$value};
-    -moz-#{$property}: #{$value};
-    -ms-#{$property}: #{$value};
-    -o-#{$property}: #{$value};
-    #{$property}: #{$value};
+  -webkit-#{$property}: #{$value};
+  -khtml-#{$property}: #{$value};
+  -moz-#{$property}: #{$value};
+  -ms-#{$property}: #{$value};
+  -o-#{$property}: #{$value};
+  #{$property}: #{$value};
 }
 
 // Avatar
 @mixin avatar-size-ratio($height: 42, $width: 42) {
-    height: #{$height}px;
-    width: #{$width}px;
+  height: #{$height}px;
+  width: #{$width}px;
 }
 
 // Avatar (Font)
-@mixin avatar-font-ratio($key: 'default') {
-    @if ($key == 'default') {
-        font-size: $gov-fs-xs;
-    } @else if($key == 'sm') {
-        font-size: $gov-fs-x-sm;
-    } @else if($key == 'md') {
-        font-size: $gov-fs-lg * 1.5;
-    } @else if($key == 'lg') {
-        font-size: $gov-fs-lg * 2;
-    }
+@mixin avatar-font-ratio($key: "default") {
+  @if ($key == "default") {
+    font-size: $gov-fs-xs;
+  } @else if($key == "sm") {
+    font-size: $gov-fs-x-sm;
+  } @else if($key == "md") {
+    font-size: $gov-fs-lg * 1.5;
+  } @else if($key == "lg") {
+    font-size: $gov-fs-lg * 2;
+  }
 }
 
 // Border
 @mixin border-property(
-    $border-placement: all,
-    $border-width: 1,
-    $border-style: solid,
-    $border-color: $gov-cs-dark-200
+  $border-placement: all,
+  $border-width: 1,
+  $border-style: solid,
+  $border-color: $gov-cs-dark-200
 ) {
-    @if ($border-placement == all) {
-        border: #{$border-width}px $border-style $border-color;
-    } @else {
-        border-#{$border-placement}: #{$border-width}px
-            $border-style
-            $border-color;
-    }
+  @if ($border-placement == all) {
+    border: #{$border-width}px $border-style $border-color;
+  } @else {
+    border-#{$border-placement}: #{$border-width}px $border-style $border-color;
+  }
 }
 
 // Image (Background)
 @mixin bg-image-property(
-    $bg-image-path: '',
-    $bg-repeat: no-repeat,
-    $bg-position: 0 0
+  $bg-image-path: "",
+  $bg-repeat: no-repeat,
+  $bg-position: 0 0
 ) {
-    background: url($bg-image) $bg-repeat $bg-position;
+  background: url($bg-image) $bg-repeat $bg-position;
 }
 
 // Line Clamp
 @mixin line-clamp($line-count: 2, $box-orient: vertical) {
-    display: -webkit-box;
-    -webkit-line-clamp: $line-count;
-    -webkit-box-orient: $box-orient;
-    overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $line-count;
+  -webkit-box-orient: $box-orient;
+  overflow: hidden;
 }
 
 // Auth Layout Background Image
 @mixin auth-bg-logo-layout($img-margin: 2rem) {
-    margin-top: $img-margin;
-    min-height: calc(100vh - $img-margin);
+  margin-top: $img-margin;
+  min-height: calc(100vh - $img-margin);
 }
 
 // Table > Resizable
 @mixin table-thead-resizable($cursor: resize, $size: $gov-fs-xs) {
-    font-size: $size;
-    cursor: $cursor;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    color: $gov-cs-dark-200;
-    @include css3-prefix(transition, color 0.1s ease);
+  font-size: $size;
+  cursor: $cursor;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: $gov-cs-dark-200;
+  @include css3-prefix(transition, color 0.1s ease);
 }
 
 // Table > Responsive > Height
 @mixin table-responsive_vh($value) {
-    max-height: calc(100vh - $value);
+  max-height: calc(100vh - $value);
 }
 
 @mixin contact-status($color: $gov-cs-info) {
-    &::before {
-        background-color: $color;
-    }
+  &::before {
+    background-color: $color;
+  }
+}
+
+// Source mixin
+@mixin make-container() {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: calc($base-spc * 1.5);
+  padding-right: calc($base-spc * 1.5);
+
+  @include breakpoint(sm) {
+    max-width: map-get($container-max-widths, sm);
+  }
+
+  @include breakpoint(md) {
+    max-width: map-get($container-max-widths, md);
+  }
+
+  @include breakpoint(lg) {
+    max-width: map-get($container-max-widths, lg);
+  }
+
+  @include breakpoint(xl) {
+    max-width: map-get($container-max-widths, xl);
+  }
+
+  @include breakpoint(xxl) {
+    max-width: map-get($container-max-widths, xxl);
+  }
 }
