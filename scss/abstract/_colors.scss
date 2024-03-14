@@ -1,0 +1,65 @@
+// Vermilion (Primary)
+$primary-50: #fff6ec;
+$primary-100: #ffebd3;
+$primary-200: #ffd2a5;
+$primary-300: #ffb26d;
+$primary-400: #ff8632;
+$primary-500: #ff630a;
+$primary: #ff4900;
+$primary-700: #cc3202;
+$primary-800: #a1280b;
+$primary-900: #82230c;
+$primary-1000: #460e04;
+
+$primary-shades: (
+  "100": $primary-100,
+  "200": $primary-200,
+  "300": $primary-300,
+  "400": $primary-400,
+  "500": $primary-500,
+  "600": $primary,
+  "700": $primary-700,
+  "800": $primary-800,
+  "900": $primary-900,
+);
+
+// Grey
+$grey-50: #f6f6f6;
+$grey-100: #e7e7e7;
+$grey-200: #d1d1d1;
+$grey-300: #b0b0b0;
+$grey: #808080;
+$grey-500: #6d6d6d;
+$grey-600: #5d5d5d;
+$grey-700: #4f4f4f;
+$grey-800: #454545;
+$grey-900: #3d3d3d;
+
+// Natural
+$black: #000000;
+$white: #ffffff;
+$grey: $grey;
+
+// Color State
+$info: #2f80ed;
+$warning: #e2b93b;
+$success: #27ae60;
+$danger: #eb5757;
+
+$colors: (
+  "primary": $primary,
+  "black": $black,
+  "white": $white,
+);
+
+$theme-colors: (
+  "primary": $primary,
+);
+
+// font size
+$base-fs: 1rem; // 16
+$fs-xs: $base-fs * 0.5; // 8
+$fs-sm: $base-fs * 0.75; // 12
+$fs-lg: $base-fs * 1.5; // 24
+$fs-xl: $base-fs * 2; // 32
+$fs-xxl: $base-fs * 3; // 48
