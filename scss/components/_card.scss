@@ -1,0 +1,54 @@
+.service-item {
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+  border-radius: calc($base-spc * 2 + 4px);
+  color: $grey-50;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  margin-bottom: 30px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(170, 170, 170, 0) 0%,
+    rgba(170, 170, 170, 0.2) 30%,
+    rgba(255, 73, 0, 0.9) 100%
+  );
+
+  @include css3-prefix(transition, background 0.3s ease);
+
+  &:hover {
+    background-color: $primary;
+  }
+
+  img {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+  }
+}
+
+.service-item-link {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+}
+
+.service-item-content{
+  padding: calc($base-spc * 2);
+  width: 100%;
+  font-size: calc($fs-base * 2.25);
+  font-weight: $fw-700;
+  
+  .service-title{
+    display: block;
+    margin-bottom: calc($base-spc * 1.5);
+  }
+
+  .currency{
+    font-size: $fs-sm;
+  }
+}
+

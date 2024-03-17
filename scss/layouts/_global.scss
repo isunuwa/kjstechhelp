@@ -12,3 +12,8 @@
     display: inline-#{$d-inline};
   }
 }
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}

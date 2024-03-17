@@ -1,0 +1,22 @@
+.kj-content {
+  padding: 100px 0;
+}
+
+.content-header {
+  margin-bottom: 40px;
+}
+
+.content-header_title,
+.content-header_description {
+  font-weight: $fw-700;
+}
+
+.content-header_title {
+  color: $primary;
+  text-transform: uppercase;
+  font-size: $fs-lg;
+}
+
+.content-header_description {
+  color: $secondary;
+}
