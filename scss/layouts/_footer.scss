@@ -18,8 +18,8 @@
   margin-top: 260px;
 
   &::before {
-    // content: url('/assets/svgs/footer-wave.svg');
     content: url("../assets/svgs/footer-wave.svg");
+    overflow: hidden;
     object-fit: cover;
     position: absolute;
     left: 0;
