@@ -1,0 +1,26 @@
+.km-links-list {
+  .km-title {
+    text-transform: uppercase;
+    font-weight: $fw-700;
+    color: $primary;
+    margin-bottom: calc($base-spc * 2);
+  }
+
+  .km-list {
+    list-style: none;
+    font-size: $fs-sm;
+  }
+
+  .km-link {
+    padding: $xs-spc $base-spc;
+    padding-left: 0;
+    display: inline-block;
+    text-decoration: none;
+    color: $grey-200;
+    @include css3-prefix(transition, color 0.3s ease);
+
+    &:hover {
+      color: $primary;
+    }
+  }
+}

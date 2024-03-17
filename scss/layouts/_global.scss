@@ -1,3 +1,14 @@
 .container {
   @include make-container();
 }
+
+.is-dark {
+  color: $grey-200;
+  background-color: $secondary;
+}
+
+@each $d-inline in $d-inlines {
+  .d-inline-#{$d-inline} {
+    display: inline-#{$d-inline};
+  }
+}

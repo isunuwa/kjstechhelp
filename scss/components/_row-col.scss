@@ -1,0 +1,12 @@
+.row {
+  @include row();
+}
+
+// Column Sizes
+$col-sizes: (2, 4, 6, 8, 10, 12);
+
+@each $col-size in $col-sizes {
+  .col-#{$col-size} {
+    @include col($col-size);
+  }
+}
