@@ -19,7 +19,7 @@
 
   &::before {
     // content: url('/assets/svgs/footer-wave.svg');
-    content: url("/assets/svgs/footer-wave.svg");
+    content: url("../assets/svgs/footer-wave.svg");
     object-fit: cover;
     position: absolute;
     left: 0;
