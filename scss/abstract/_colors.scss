@@ -1,4 +1,5 @@
 // Vermilion (Primary)
+$primary-20: #fbfaf6;
 $primary-50: #fff6ec;
 $primary-100: #ffebd3;
 $primary-200: #ffd2a5;
@@ -12,6 +13,8 @@ $primary-900: #82230c;
 $primary-1000: #460e04;
 
 $primary-shades: (
+  "20": $primary-20,
+  "50": $primary-50,
   "100": $primary-100,
   "200": $primary-200,
   "300": $primary-300,
@@ -22,6 +25,16 @@ $primary-shades: (
   "800": $primary-800,
   "900": $primary-900,
 );
+
+@each $color, $value in $primary-shades {
+  .text-primary-#{$color} {
+    color: $value;
+  }
+
+  .bg-primary-#{$color} {
+    background-color: $value;
+  }
+}
 
 // Cinder (Secondary)
 $secondary: #0f0e17;
@@ -40,6 +53,29 @@ $grey-700: #4f4f4f;
 $grey-800: #454545;
 $grey-900: #3d3d3d;
 
+$grey-shades: (
+  "50": $grey-50,
+  "100": $grey-100,
+  "200": $grey-200,
+  "300": $grey-300,
+  "400": $grey,
+  "500": $grey-500,
+  "600": $grey-600,
+  "700": $grey-700,
+  "800": $grey-800,
+  "900": $grey-900,
+);
+
+@each $color, $value in $grey-shades {
+  .text-grey-#{$color} {
+    color: $value;
+  }
+
+  .bg-grey-#{$color} {
+    background-color: $value;
+  }
+}
+
 // Natural
 $black: #000000;
 $white: #ffffff;
@@ -57,14 +93,20 @@ $colors: (
   "white": $white,
 );
 
+@each $color, $value in $colors {
+  .text-#{$color} {
+    color: $value;
+  }
+}
+
 $theme-colors: (
   "primary": $primary,
 );
 
-
 // Color
-$cream: #FDE58A;
+$cream: #fde58a;
 
-.cream{
+.cream {
   color: $cream;
 }
+
