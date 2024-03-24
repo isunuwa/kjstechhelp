@@ -1,0 +1,49 @@
+.cta {
+  border-radius: calc($base-spc * 2.5);
+  padding: calc($base-spc * 5);
+  position: relative;
+  overflow: hidden;
+  
+  .content-header {
+    margin-bottom: 1rem;
+  }
+
+  .content-body {
+    max-width: 610px;
+    margin: 0 auto;
+  }
+
+  .input-group {
+    max-width: 420px;
+    margin: 0 auto;
+    margin-top: 2rem;
+  }
+}
+
+.cta-description {
+  text-align: center;
+  font-weight: $fw-300;
+}
+
+// Arrow
+.kj-arrow {
+  pointer-events: none;
+  &::before {
+    position: absolute;
+  }
+}
+
+.kj-arrow-left {
+  &::before {
+    content: url("../../assets/svgs/arrow-flow-1.svg");
+    top: -25px;
+  }
+}
+
+.kj-arrow-right {
+  &::before {
+    content: url("../../assets/svgs/arrow-flow-2.svg");
+    right: -20px;
+    bottom: -70px;
+  }
+}

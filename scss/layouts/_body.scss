@@ -22,3 +22,19 @@
 .content-header_description {
   color: $secondary;
 }
+
+.dark-theme {
+  // Header
+  .content-header_title {
+    color: $primary;
+  }
+
+  .content-header_description {
+    color: $white;
+  }
+
+  // Body
+  .content-body{
+    color: $grey-200;
+  }
+}

@@ -41,6 +41,22 @@ $secondary: #0f0e17;
 $secondary-900: #302e4c;
 $secondary-800: #353359;
 
+$secondary-shades: (
+  "800": $secondary-800,
+  "900": $secondary-900,
+  "950": $secondary,
+);
+
+@each $color, $value in $secondary-shades {
+  .text-secondary-#{$color} {
+    color: $value;
+  }
+
+  .bg-secondary-#{$color} {
+    background-color: $value;
+  }
+}
+
 // Grey
 $grey-50: #f6f6f6;
 $grey-100: #e7e7e7;
@@ -109,4 +125,3 @@ $cream: #fde58a;
 .cream {
   color: $cream;
 }
-

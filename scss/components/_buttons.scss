@@ -18,6 +18,7 @@
 
 // Button > Mixins
 @mixin button-variant($color, $value) {
+  color: $white;
   background-color: $value;
 }
 
